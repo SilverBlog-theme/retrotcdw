@@ -111,7 +111,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-static/
+static/*
+!static/img/
 test/
 config.json
 .idea
