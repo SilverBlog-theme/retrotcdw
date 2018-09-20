@@ -1,23 +1,25 @@
 import '../scss/index.scss';
 
+const cTN = (e = '') => document.createTextNode(e);
+
 const element = document.getElementById('since-bar');
 const textNodes = [
-    document.createTextNode('本站已经安全运行 '),
-    document.createTextNode(''),
-    document.createTextNode(' 天 '),
-    document.createTextNode(''),
-    document.createTextNode(' 小时 '),
-    document.createTextNode(''),
-    document.createTextNode(' 分 '),
-    document.createTextNode(''),
-    document.createTextNode(' 秒。'),
+    cTN('本站已经安全运行 '),
+    cTN(),
+    cTN(' 天 '),
+    cTN(),
+    cTN(' 小时 '),
+    cTN(),
+    cTN(' 分 '),
+    cTN(),
+    cTN(' 秒。'),
 ];
 
 for (let i = 0; i < textNodes.length; i += 1) {
     element.appendChild(textNodes[i]);
 }
 
-function showDateTime() {
+const showDateTime = () => {
     setTimeout(showDateTime, 1000);
     const birthday = new Date(new Date(document.getElementById('website-birth').value));
     const today = new Date();
@@ -34,5 +36,6 @@ function showDateTime() {
     textNodes[3].textContent = hours;
     textNodes[5].textContent = minutes;
     textNodes[7].textContent = seconds;
-}
+};
+
 showDateTime();
