@@ -9,6 +9,16 @@ body {
 .container {
     width: 56em;
     margin: 0 auto;
+    .title, .content {
+        padding: 0.5em 1em;
+        font-size: 0.875em;
+        line-height: 1.5em;
+    }
+    .title {
+        background-color: #6699ff;
+        color: #fff;
+        font-weight: bold;
+    }
     header {
         background-color: blue;
         position: relative;
@@ -79,28 +89,24 @@ body {
             }
         }
     }
-    main {
+    main, section, footer {
         background-color: #fff;
+    }
+    main {
         overflow: auto;
         .content-list {
             float: left;
             width: 38em;
-            article {
-                .title, .content {
-                    padding: 0.5em 1em;
-                    font-size: 0.875em;
-                    line-height: 1.5em;
-                }
-                .title {
-                    background-color: #6699ff;
-                    color: #fff;
-                    font-weight: bold;
-                }
-            }
         }
         aside {
             float: right;
             width: 18em;
         }
+    }
+    footer {
+        text-align: center;
+        font-size: 0.875em;
+        padding: 1em;
+        line-height: 1.5em;
     }
 }
