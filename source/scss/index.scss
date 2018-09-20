@@ -79,4 +79,28 @@ body {
             }
         }
     }
+    main {
+        background-color: #fff;
+        overflow: auto;
+        .content-list {
+            float: left;
+            width: 38em;
+            article {
+                .title, .content {
+                    padding: 0.5em 1em;
+                    font-size: 0.875em;
+                    line-height: 1.5em;
+                }
+                .title {
+                    background-color: #6699ff;
+                    color: #fff;
+                    font-weight: bold;
+                }
+            }
+        }
+        aside {
+            float: right;
+            width: 18em;
+        }
+    }
 }
