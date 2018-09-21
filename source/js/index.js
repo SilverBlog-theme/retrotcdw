@@ -47,3 +47,6 @@ if (window.devicePixelRatio === 1 && navigator.platform.toLowerCase().indexOf('w
     elem.textContent = 'body { font-family: SimSun }';
     document.head.appendChild(elem);
 }
+
+// 亿万 PV
+document.getElementById('pv').textContent = Math.floor(Math.random() * 9000000000) + 100000000;
