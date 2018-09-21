@@ -1,5 +1,6 @@
 import '../scss/index.scss';
 
+// 本站已经安全运行多久了？
 const cTN = (e = '') => document.createTextNode(e);
 
 const element = document.getElementById('since-bar');
@@ -39,3 +40,10 @@ const showDateTime = () => {
 };
 
 showDateTime();
+
+// 对于使用 100% 缩放的 Windows 环境
+if (window.devicePixelRatio === 1 && navigator.platform.toLowerCase().indexOf('win') !== -1) {
+    const elem = document.createElement('style');
+    elem.textContent = 'body { font-family: SimSun }';
+    document.head.appendChild(elem);
+}
