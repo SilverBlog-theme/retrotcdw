@@ -1,5 +1,5 @@
 body {
-    background-color: #fff;
+    background-color: #efefef;
 }
 
 .container header {
@@ -11,8 +11,7 @@ body {
 }
 
 .container nav {
-    background: #66ccff;
-    margin-bottom: 0.1em;
+    background: #66a2ff;
 }
 
 .container nav .padding {
