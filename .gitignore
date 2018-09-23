@@ -114,3 +114,5 @@ $RECYCLE.BIN/
 test/
 config.json
 .idea
+custom/links.html
+custom/sidebar.html
