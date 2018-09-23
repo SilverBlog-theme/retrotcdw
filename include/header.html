@@ -15,6 +15,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/static/{{ system_config.Theme }}/bundle.css" rel="stylesheet" type="text/css">
+    {% if template_config.Bright_Theme -%}
+        <link href="/static/{{ system_config.Theme }}/bright.css" rel="stylesheet" type="text/css">
+    {%- endif %}
     <link rel="alternate" type="application/rss+xml" title="{{ system_config.Project_Name }}" href="/rss">
     {% include "include/head.html" ignore missing %}
 </head>
