@@ -1,0 +1,12 @@
+{% include system_config.Theme + "/include/header.html" %}
+        <main>
+            <div class="content-list">
+                <article>
+                    <div class="title">【{{ page_info.time }}】{{ page_info.title }}</div>
+                    <div class="content">{{ content|safe }}</div>
+                </article>
+                <section class="comment">{% include "include/comment.html" ignore missing %}</section>
+            </div>
+            <aside>{% include system_config.Theme + "/custom/sidebar.html" ignore missing %}</aside>
+        </main>
+{% include system_config.Theme + "/include/footer.html" %}
