@@ -8,12 +8,12 @@
                     </article>
                 </div>
             {%- endfor -%}
-            <div class="pagenav clearfix">
-                <span class="prev">&lt; 上一页</span>
-                <span class="next">下一页 &gt;</span>
-            </div>
             <aside>{% include system_config.Theme + "/custom/sidebar.html" ignore missing %}</aside>
         </main>
+        <div class="pagenav clearfix">
+            <span class="prev">&lt; 上一页</span>
+            <span class="next">下一页 &gt;</span>
+        </div>
         <section>
             <div class="title" style="text-align: center">友情链接</div>
             <div class="content">{% include system_config.Theme + "/custom/links.html" ignore missing %}</div>
