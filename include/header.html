@@ -1,0 +1,48 @@
+{%- if page_info.title=="index" -%}
+    {% set title=system_config.Project_Name %}
+    {% set description=system_config.Project_Description %}
+{%- else -%}
+    {% set title=page_info.title %}
+    {% set description=page_info.excerpt %}
+{%- endif -%}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/static/{{ system_config.Theme }}/bundle.css" rel="stylesheet" type="text/css">
+    {% if template_config.Bright_Theme -%}
+        <link href="/static/{{ system_config.Theme }}/bright.css" rel="stylesheet" type="text/css">
+    {%- endif %}
+    <link rel="alternate" type="application/rss+xml" title="{{ system_config.Project_Name }}" href="/rss">
+    {% include "include/head.html" ignore missing %}
+</head>
+<body>
+    <input id="website-birth" type="hidden" value="{{ template_config.Website_Birthday }}">
+    <div class="container">
+        <header>
+            <div class="inner">
+                <h1>{{ system_config.Project_Name }}</h1>
+                <p>{{ system_config.Project_Description }}</p>
+            </div>
+        </header>
+        <nav>
+            <div class="padding left"></div>
+            <ul>
+                <li><a href="/">首页</a></li>
+                {%- for item in menu_list -%}
+                    {%- if "absolute" in item -%}
+                        {%- set url = item.absolute -%}
+                    {%- else -%}
+                        {%- set url = "/post/"+item.name -%}
+                    {%- endif -%}
+                    <li><a href="{{url}}">{{ item.title }}</a></li>
+                {%- endfor -%}
+                <li><a href="/rss">订阅</a></li>
+            </ul>
+            <div class="padding right"></div>
+        </nav>

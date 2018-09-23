@@ -111,8 +111,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-static/*
-!static/img/
 test/
 config.json
 .idea
+custom/links.html
+custom/sidebar.html
