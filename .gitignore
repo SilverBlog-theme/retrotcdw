@@ -113,6 +113,7 @@ $RECYCLE.BIN/
 
 static/*
 !static/img/
+!static/bright.css
 test/
 config.json
 .idea

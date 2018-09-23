@@ -1,0 +1,39 @@
+body {
+    background-color: #fff;
+}
+
+.container header {
+    background-color: #fff;
+}
+
+.container header .inner h1, .container header .inner p {
+    color: #000;
+}
+
+.container nav {
+    background: #66ccff;
+    margin-bottom: 0.1em;
+}
+
+.container nav .padding {
+    display: none;
+}
+
+.container nav ul li {
+    width: 6.25em;
+}
+.container nav ul li a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.container nav ul li a:hover {
+    color: #fff;
+    background: #0066ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.container .title {
+    background-color: #66ccff;
+}
