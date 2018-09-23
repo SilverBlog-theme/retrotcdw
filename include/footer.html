@@ -4,9 +4,10 @@
             {%- set url = item.absolute -%}
         {%- else -%}
             {%- set url = "/post/"+item.name -%}
-        %- endif -%}
+        {%- endif -%}
         <a href="{{url}}">{{ item.title }}</a> | 
-    {%- endfor -%}<a href="/">{{ system_config.Project_Name }}</a><br>
+    {%- endfor -%}
+    <a href="/">{{ system_config.Project_Name }}</a><br>
     网站制作：屠城大王、qwe7002 | 本站 PV 值：<span id="pv"></span>
 </footer>
 </div>
