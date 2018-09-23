@@ -1,19 +1,19 @@
 {% include system_config.Theme + "/include/header.html" %}
         <main>
-            {% for page_info in page_list -%}
-                <div class="content-list">
+            <div class="content-list">
+                {% for page_info in page_list -%}
                     <article>
                         <div class="title">【{{ page_info.time }}】<a href="/post/{{ page_info.name }}{% if static %}.html{% endif %}">{{ page_info.title }}</a></div>
                         <div class="content">{{ page_info.excerpt }}</div>
                     </article>
+                {%- endfor -%}
+                <div class="pagenav clearfix">
+                    {% if now_page!=1 %}<a class="prev" href="/index/p/{{ now_page - 1 }}">&lt;&nbsp;上一页</a>{% endif %}
+                    {% if now_page!=page_row and page_row !=1 %}<a class="next" href="/index/p/{{ now_page + 1 }}">下一页&nbsp;&gt;</a>{% endif %}
                 </div>
-            {%- endfor -%}
+            </div>
             <aside>{% include system_config.Theme + "/custom/sidebar.html" ignore missing %}</aside>
         </main>
-        <div class="pagenav clearfix">
-            <span class="prev">&lt; 上一页</span>
-            <span class="next">下一页 &gt;</span>
-        </div>
         <section>
             <div class="title" style="text-align: center">友情链接</div>
             <div class="content">{% include system_config.Theme + "/custom/links.html" ignore missing %}</div>
