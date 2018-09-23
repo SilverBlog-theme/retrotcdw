@@ -72,13 +72,6 @@ a {
             box-shadow: inset rgba(0, 0, 0, 0.123) 0.25em 0 0 0;
         }
     }
-    @for $i from 1 through 6 {
-        h#{7 - $i} {
-            font-size: 0.75em + $i * 0.25em;
-            margin: ($i * 0.1875em + 0.25em) 0;
-            line-height: ($i * 0.5em + 0.5em);
-        }
-    }
     mark {
         margin: 0.0625em;
         padding: 0.0625em;
@@ -123,7 +116,7 @@ a {
         color: #fff;
         font-weight: bold;
         a {
-            color: #efefef;
+            color: #fff;
             text-decoration: none;
             &:hover {
                 color: #fff;
